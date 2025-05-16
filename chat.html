@@ -1,26 +1,55 @@
-<html>
-<script type="text/javascript">
-  function initEmbeddedMessaging() {
-    try {
-      embeddedservice_bootstrap.settings.language = 'en_US';
-
-      embeddedservice_bootstrap.init(
-        '00Daj00000M3qi9',
-        'CCA_Web_Deployment',
-        'https://orgfarm-1664a72b95-dev-ed.develop.my.site.com', // ✅ corriger ici
-        {
-          scrt2URL: 'https://orgfarm-1664a72b95-dev-ed.develop.my.site.com' // ✅ corriger ici aussi
-        }
-      );
-    } catch (err) {
-      console.error('Error loading Embedded Messaging: ', err);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Test Embedded Messaging - AgentForce</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
     }
-  }
-</script>
 
-<script
-  type="text/javascript"
-  src="https://orgfarm-1664a72b95-dev-ed.develop.my.site.com/embeddedservice/asyncclient/bootstrap.min.js"
-  onload="initEmbeddedMessaging()">
-</script>
-<html>
+    h1 {
+      color: #2e86de;
+    }
+
+    .embeddedMessagingSidebar {
+      visibility: visible !important;
+      opacity: 1 !important;
+      display: block !important;
+      z-index: 999999 !important;
+      bottom: 20px !important;
+      right: 20px !important;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎯 Test Salesforce Embedded Messaging</h1>
+  <p>Ce fichier est hébergé sur GitHub Pages ou Netlify.</p>
+
+  <script type="text/javascript">
+    function initEmbeddedMessaging() {
+      try {
+        embeddedservice_bootstrap.settings.language = 'en_US';
+
+        embeddedservice_bootstrap.init(
+          '00Daj00000M3qi9', // 👉 Ton Org ID
+          'CCA_Web_Deployment', // 👉 Nom exact de ton Deployment
+          'https://orgfarm-1664a72b95-dev-ed.develop.my.site.com', // ✅ base URL correcte
+          {
+            scrt2URL: 'https://orgfarm-1664a72b95-dev-ed.develop.my.site.com' // ✅ pas de scrt.com
+          }
+        );
+      } catch (err) {
+        console.error('❌ Erreur d’initialisation Embedded Messaging:', err);
+      }
+    }
+  </script>
+
+  <script
+    type="text/javascript"
+    src="https://orgfarm-1664a72b95-dev-ed.develop.my.site.com/embeddedservice/asyncclient/bootstrap.min.js"
+    onload="initEmbeddedMessaging()">
+  </script>
+</body>
+</html>
