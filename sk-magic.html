@@ -1,66 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <title>Welcome to SK Magic Chat</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>SK Magic Inspired</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom right, #eef1f6, #dce3ec);
+      background-color: #f4f6f9;
+      font-family: 'Arial', sans-serif;
+    }
+
+    header {
+      background: white;
+      padding: 1rem 2rem;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
+      border-bottom: 1px solid #ddd;
     }
 
-    .chat-container {
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4rem 8rem;
       background-color: white;
-      border-radius: 1rem;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      padding: 2rem;
-      width: 90%;
-      max-width: 600px;
-      text-align: center;
     }
 
-    .chat-header {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: #2b2d42;
+    .hero-text {
+      max-width: 50%;
     }
 
-    .chat-subtitle {
-      font-size: 1rem;
-      color: #5c6b73;
+    .hero-text h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      color: #666;
       margin-bottom: 1.5rem;
     }
 
-    #embedded-chat {
-      height: 600px;
+    .hero-text button {
+      background: black;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .hero-image img {
+      max-width: 400px;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
-  <div class="chat-container">
-    <div class="chat-header">🤖 Welcome to SK Magic Chat</div>
-    <div class="chat-subtitle">Our virtual assistant is here to help you 24/7.</div>
-    <div id="embedded-chat"></div>
-  </div>
 
-  <script type='text/javascript'>
+  <header>
+    <div><strong>SK magic</strong></div>
+    <nav>
+      <a href="#">제품</a>
+      <a href="#">이벤트</a>
+      <a href="#">고객지원</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>플라스틱 탱크 없이 더 깨끗하게,<br>SK매직이 만든 진짜 직수 얼음</h1>
+      <p>25년 5월 신제품 출시<br>원코크 플라스 얼음물 정수기</p>
+      <button>자세히 보기</button>
+    </div>
+    <div class="hero-image">
+      <img src="ice-machine.jpg" alt="정수기 이미지">
+    </div>
+  </section>
+
+  <!-- ✅ Salesforce Embedded Chatbot -->
+  <script type="text/javascript">
     function initEmbeddedMessaging() {
       try {
         embeddedservice_bootstrap.settings.language = 'en_US';
 
         embeddedservice_bootstrap.init(
-          '00DgL000002QqMn',
-          'SK_Magic_Chabot_for_Github',
+          '00DgL000002QqMn', // Org Id
+          'SK_Magic_Chabot_for_Github', // Embedded Service Name
           'https://orgfarm-5ecd526fa4-dev-ed.develop.my.site.com/ESWSKMagicChabotforGi1747807867438',
           {
             scrt2URL: 'https://orgfarm-5ecd526fa4-dev-ed.develop.my.salesforce-scrt.com'
@@ -71,6 +106,8 @@
       }
     };
   </script>
-  <script type='text/javascript' src='https://orgfarm-5ecd526fa4-dev-ed.develop.my.site.com/ESWSKMagicChabotforGi1747807867438/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
+  <script type="text/javascript" src="https://orgfarm-5ecd526fa4-dev-ed.develop.my.site.com/ESWSKMagicChabotforGi1747807867438/assets/js/bootstrap.min.js" onload="initEmbeddedMessaging()"></script>
+
 </body>
 </html>
