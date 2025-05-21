@@ -2,13 +2,13 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>SK Magic Inspired</title>
+  <title>SK Magic Campaign</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      background-color: #f4f6f9;
+      background-color: #fff5eb;
       font-family: 'Arial', sans-serif;
     }
 
@@ -16,9 +16,16 @@
       background: white;
       padding: 1rem 2rem;
       display: flex;
-      justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid #ddd;
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    nav {
+      margin-left: auto;
     }
 
     nav a {
@@ -33,34 +40,36 @@
       justify-content: space-between;
       align-items: center;
       padding: 4rem 8rem;
-      background-color: white;
+      background-color: #fff5eb;
     }
 
     .hero-text {
-      max-width: 50%;
+      max-width: 45%;
     }
 
     .hero-text h1 {
       font-size: 2rem;
       margin-bottom: 1rem;
+      color: #222;
     }
 
     .hero-text p {
-      color: #666;
+      color: #444;
       margin-bottom: 1.5rem;
     }
 
     .hero-text button {
-      background: black;
+      background: #c00;
       color: white;
       padding: 0.8rem 1.5rem;
       border: none;
-      border-radius: 4px;
+      border-radius: 999px;
       cursor: pointer;
+      font-weight: bold;
     }
 
     .hero-image img {
-      max-width: 400px;
+      max-width: 600px;
       border-radius: 8px;
     }
   </style>
@@ -68,7 +77,7 @@
 <body>
 
   <header>
-    <div><strong>SK magic</strong></div>
+    <img src="SKmagic.png" alt="SK Magic Logo">
     <nav>
       <a href="#">제품</a>
       <a href="#">이벤트</a>
@@ -78,24 +87,24 @@
 
   <section class="hero">
     <div class="hero-text">
-      <h1>플라스틱 탱크 없이 더 깨끗하게,<br>SK매직이 만든 진짜 직수 얼음</h1>
-      <p>25년 5월 신제품 출시<br>원코크 플라스 얼음물 정수기</p>
+      <h1>SK매직의<br>대고객 품질·서비스 혁신 약속</h1>
+      <p>‘고객에게 사랑 받는 1등 기업’으로 도약하기 위한<br>혁신 프로그램을 선보입니다.</p>
       <button>자세히 보기</button>
     </div>
     <div class="hero-image">
-      <img src="ice-machine.jpg" alt="정수기 이미지">
+      <img src="241031_brand_pc-222.png" alt="캠페인 이미지">
     </div>
   </section>
 
-  <!-- ✅ Salesforce Embedded Chatbot -->
+  <!-- Chatbot Salesforce Embedded -->
   <script type="text/javascript">
     function initEmbeddedMessaging() {
       try {
         embeddedservice_bootstrap.settings.language = 'en_US';
 
         embeddedservice_bootstrap.init(
-          '00DgL000002QqMn', // Org Id
-          'SK_Magic_Chabot_for_Github', // Embedded Service Name
+          '00DgL000002QqMn',
+          'SK_Magic_Chabot_for_Github',
           'https://orgfarm-5ecd526fa4-dev-ed.develop.my.site.com/ESWSKMagicChabotforGi1747807867438',
           {
             scrt2URL: 'https://orgfarm-5ecd526fa4-dev-ed.develop.my.salesforce-scrt.com'
