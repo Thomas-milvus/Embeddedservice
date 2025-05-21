@@ -7,9 +7,8 @@
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
-      background-color: #fff5eb;
       font-family: 'Arial', sans-serif;
+      background-color: #fff;
     }
 
     header {
@@ -35,42 +34,9 @@
       font-weight: bold;
     }
 
-    .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 4rem 8rem;
-      background-color: #fff5eb;
-    }
-
-    .hero-text {
-      max-width: 45%;
-    }
-
-    .hero-text h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #222;
-    }
-
-    .hero-text p {
-      color: #444;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-text button {
-      background: #c00;
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border: none;
-      border-radius: 999px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .hero-image img {
-      max-width: 600px;
-      border-radius: 8px;
+    .hero-banner img {
+      width: 100%;
+      display: block;
     }
   </style>
 </head>
@@ -85,18 +51,12 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>SK매직의<br>대고객 품질·서비스 혁신 약속</h1>
-      <p>‘고객에게 사랑 받는 1등 기업’으로 도약하기 위한<br>혁신 프로그램을 선보입니다.</p>
-      <button>자세히 보기</button>
-    </div>
-    <div class="hero-image">
-      <img src="241031_brand_pc-222.png" alt="캠페인 이미지">
-    </div>
-  </section>
+  <!-- ✅ Full-width campaign image (hero banner) -->
+  <div class="hero-banner">
+    <img src="241031_brand_pc-222.png" alt="캠페인 이미지 전체">
+  </div>
 
-  <!-- Chatbot Salesforce Embedded -->
+  <!-- Salesforce Chatbot -->
   <script type="text/javascript">
     function initEmbeddedMessaging() {
       try {
@@ -115,7 +75,6 @@
       }
     };
   </script>
-
   <script type="text/javascript" src="https://orgfarm-5ecd526fa4-dev-ed.develop.my.site.com/ESWSKMagicChabotforGi1747807867438/assets/js/bootstrap.min.js" onload="initEmbeddedMessaging()"></script>
 
 </body>
